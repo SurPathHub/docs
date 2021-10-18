@@ -1,0 +1,39 @@
+@use '~@surpathhub/ugnay/SPHCore/Typography';
+
+.sph-title-bar {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 0.5rem;
+    align-items: center;
+    // border-bottom: 1px solid var(--sph-theme--secondary);
+    // border-bottom: 2px solid var(--sph-theme--secondary);
+    
+    padding: 0.5rem 0;
+    
+    .sph-title-bar__icon,
+    i {
+        color: var(--sph-theme--secondary);
+        font-size: Typography.px-to-rem(26px);
+        margin: 0;
+    }
+    
+    .sph-title-bar__title,
+    h2 {
+        font-size: Typography.px-to-rem(24px);
+        margin: 0;
+    }
+    
+    &.centered {
+        width: max-content;
+        margin: 0 auto 1rem auto;
+        display: flex;
+        flex-flow: row nowrap;
+        grid-gap: 0;
+        justify-content: center;
+        align-items: center;
+        
+        & > * + * {
+            padding-left: 0.5rem;
+        }
+    }
+}

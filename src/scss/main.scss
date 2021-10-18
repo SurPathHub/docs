@@ -1,0 +1,151 @@
+@use '~@surpathhub/ugnay/SPHCore/Theme';
+@use '~@surpathhub/ugnay/SPHCore/Typography';
+@use '~@surpathhub/ugnay/SPHCore/Elevation';
+
+@use '~@surpathhub/ugnay/SPHButton' with (
+    $button-size: 16px
+);
+@use '~@surpathhub/ugnay/SPHCard';
+
+@use 'helpers/media-mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
+
+html[data-theme='light'] {
+    @include Theme.config(
+        #d4d4d4,
+        #41901c
+    );
+    
+    --ifm-color-primary: var(--sph-theme--secondary);
+    // --ifm-navbar-link-hover-color: var(--sph-theme--secondary);
+    // --ifm-link-color: var(--sph-theme--secondary);
+    // --ifm-menu-color-active: var(--sph-theme--secondary);
+    
+    --sph-button-fill: var(--sph-theme--secondary-dark);
+    --sph-button-active-fill: var(--sph-theme--secondary-dark);
+    
+    .footer--dark {
+        --ifm-footer-color: #000 !important;
+        --ifm-footer-title-color: #000 !important;
+        --ifm-footer-link-color: #000 !important;
+    }
+    
+    .hero--primary {
+        background: linear-gradient(45deg, rgb(36, 109, 0) 0%, rgb(113, 186, 78) 100%);;
+        color: var(--sph-theme--on-primary);
+    }
+}
+
+html[data-theme='dark'] {
+    @include Theme.config(
+        #464646,
+        #7ed957
+    );
+    
+    --ifm-color-primary: var(--sph-theme--secondary);
+    // --ifm-navbar-link-hover-color: var(--sph-theme--secondary);
+    // --ifm-link-color: var(--sph-theme--secondary);
+    // --ifm-menu-color-active: var(--sph-theme--secondary);
+}
+
+* {
+    font-family: 'Public Sans', sans-serif;
+}
+
+code,
+code * {
+    font-family: var(--ifm-font-family-monospace) !important;
+}
+
+.content-wrap {
+    width: calc(100% - 30px);
+    max-width: 977px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 0.7rem;
+    
+    @include media-mixins.breakpoint('m', 'min') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include media-mixins.breakpoint('l', 'min') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer {
+    --ifm-footer-background-color: var(--sph-theme--primary);
+    
+    &.footer--dark,
+    &.footer--light {
+        --ifm-footer-background-color: var(--sph-theme--primary);
+    }
+    
+    
+}
+
+.hero--primary {
+    background: linear-gradient(45deg, rgba(9, 28, 0, 1) 0%, rgb(36, 109, 0) 100%);;
+    color: var(--sph-theme--on-primary);
+}
+
+.navbar__title,
+.navbar__brand {
+    font-size: Typography.px-to-rem(18px);
+    
+    &:hover {
+        color: var(--sph-theme--secondary);
+    }
+}
+
+.navbar {
+    @include Elevation.apply(3);
+    
+    .navbar__link {
+        font-weight: normal;
+        
+        &:hover {
+            color: var(--sph-theme--secondary);
+        }
+    }
+}
+
+//
+//  SPH Components
+//
+
+@include SPHButton.use();
+a:hover {
+    text-decoration: none !important;
+    
+    *:hover {
+        text-decoration: none !important;
+    }
+}
+
+@include SPHCard.use();
+.sph-card {
+    transition: all 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-0.3rem);
+        @include Elevation.apply(5);
+    }
+    
+    * {
+        margin: 0;
+    }
+    
+    .sph-card__media img {
+        object-position: center !important;
+        // object-fit: cover !important;
+        height: 100% !important;
+    }
+}
