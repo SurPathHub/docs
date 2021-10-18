@@ -13,8 +13,9 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'SurPathHub', // Usually your GitHub org/user name.
+  projectName: 'docs', // Usually your repo name.
+  trailingSlash: false,
   plugins: [
     'docusaurus-plugin-sass'
   ],
