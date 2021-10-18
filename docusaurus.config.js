@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 const config = {
   title: 'SurPathHub Docs',
   tagline: 'The official documentation website for all open source SurPathHub projects',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.surpathhub.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
