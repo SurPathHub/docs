@@ -7,6 +7,7 @@ import SPHButton from "../components/SPHButton";
 import {projects} from "../constants/projects";
 import SPHCard from "../components/SPHCard";
 import SPHTitleBar from "../components/SPHTitleBar";
+import siteMetadata from "@generated/site-metadata";
 
 function Hero() {
     const {siteConfig} = useDocusaurusContext();
@@ -28,10 +29,11 @@ function Hero() {
 }
 
 export default function Home() {
+    const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
             title={`HOME`}
-            description="Description will go into a meta tag in <head />">
+            description={siteConfig.tagline}>
             <Hero/>
             <main className="content-wrap">
                 <SPHTitleBar>SurPathHub Projects</SPHTitleBar>
