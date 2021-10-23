@@ -27,20 +27,10 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+          editUrl: 'https://github.com/SurPathHub/docs',
         },
         theme: {
           customCss: require.resolve('./src/scss/main.scss'),
-          algolia: {
-            appId: 'BH4D9OD16A',
-            contextualSearch: true,
-          },
         },
       }),
     ],
@@ -80,7 +70,7 @@ const config = {
             items: [
               {
                 label: 'Documentation',
-                to: '/docs/index',
+                to: '/docs',
               },
             ],
           },
