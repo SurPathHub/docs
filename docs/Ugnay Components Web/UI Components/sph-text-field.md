@@ -50,7 +50,7 @@ title: SPHTextField
 @include SPHTextField.use();
 ```
 
-#### CSS custom properties API
+### CSS custom properties API
 
 | Property | Effect |
 |----------|--------|
