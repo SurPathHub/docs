@@ -51,7 +51,7 @@ Follow the instructions here: https://discordpy.readthedocs.io/en/stable/discord
 
 4. After setting up Dayong, `commit` and `push` your changes.
 
-5. [Deploy!](../README.md#deployment)
+5. [Deploy!](index.md#deployment)
 
 ### For local development
 

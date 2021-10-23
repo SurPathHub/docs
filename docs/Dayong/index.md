@@ -47,7 +47,7 @@ https://heroku.com/deploy?template=$YOUR_REPOSITORY_LINK$
 
 ## Contributing
 
-Check the [contributing guide](./.github/CONTRIBUTING.md) to learn more about the development process and how you can test your changes.
+Check the [contributing guide](contributing.md) to learn more about the development process and how you can test your changes.
 
 ## Code of Conduct
 
@@ -55,4 +55,4 @@ Read our [Code of Conduct](https://github.com/SurPathHub/support/blob/main/CODE_
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/SurPathHub/Dayong/blob/main/LICENSE) for more information.
