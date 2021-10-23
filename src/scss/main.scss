@@ -10,6 +10,7 @@
 @use 'helpers/media-mixins';
 
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
+@import url('https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css');
 
 html[data-theme='light'] {
     @include Theme.config(
@@ -23,7 +24,7 @@ html[data-theme='light'] {
     // --ifm-menu-color-active: var(--sph-theme--secondary);
     
     --sph-button-fill: var(--sph-theme--secondary-dark);
-    --sph-button-active-fill: var(--sph-theme--secondary-dark);
+    --sph-button-active-fill: #29610f;
     
     .footer--dark {
         --ifm-footer-color: #000 !important;
@@ -31,9 +32,13 @@ html[data-theme='light'] {
         --ifm-footer-link-color: #000 !important;
     }
     
-    .hero--primary {
-        background: linear-gradient(45deg, rgb(36, 109, 0) 0%, rgb(113, 186, 78) 100%);;
-        color: var(--sph-theme--on-primary);
+    .hero {
+        //
+        
+        &.hero--primary {
+            background: linear-gradient(45deg, rgb(36, 109, 0) 0%, rgb(113, 186, 78) 100%);;
+            color: var(--sph-theme--on-primary);
+        }
     }
 }
 
@@ -49,7 +54,7 @@ html[data-theme='dark'] {
     // --ifm-menu-color-active: var(--sph-theme--secondary);
 }
 
-* {
+*, h1, h2, h3, h4 {
     font-family: 'Public Sans', sans-serif;
 }
 
@@ -80,6 +85,12 @@ code * {
     }
 }
 
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .footer {
     --ifm-footer-background-color: var(--sph-theme--primary);
     
@@ -91,9 +102,25 @@ code * {
     
 }
 
-.hero--primary {
-    background: linear-gradient(45deg, rgba(9, 28, 0, 1) 0%, rgb(36, 109, 0) 100%);;
-    color: var(--sph-theme--on-primary);
+.hero {
+    text-align: center;
+    
+    .hero__title {
+        font-size: 42px;
+        line-height: normal;
+        margin: 0;
+        font-family: 'Public Sans', sans-serif;
+    }
+    
+    .hero__subtitle {
+        font-family: 'Public Sans', sans-serif;
+        font-size: 18px;
+    }
+    
+    &.hero--primary {
+        background: linear-gradient(45deg, rgba(9, 28, 0, 1) 0%, rgb(36, 109, 0) 100%);;
+        color: var(--sph-theme--on-primary);
+    }
 }
 
 .navbar__title,
@@ -122,6 +149,11 @@ code * {
 //
 
 @include SPHButton.use();
+.sph-button--hero {
+    .sph-button__label {
+        --sph-button-size: #{Typography.px-to-rem(18px)} !important;
+    }
+}
 a:hover {
     text-decoration: none !important;
     

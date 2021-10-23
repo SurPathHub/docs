@@ -37,6 +37,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/scss/main.scss'),
+          algolia: {
+            appId: 'BH4D9OD16A',
+            contextualSearch: true,
+          },
         },
       }),
     ],
@@ -45,6 +49,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark'
+      },
       navbar: {
         title: 'SurPathHub Docs',
         logo: {
@@ -57,6 +64,11 @@ const config = {
             docId: 'index',
             position: 'left',
             label: 'Documentation',
+          },
+          {
+            href: 'https://github.com/SurPathHub/docs',
+            position: 'right',
+            label: 'GitHub',
           },
         ],
       },

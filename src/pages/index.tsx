@@ -1,25 +1,26 @@
 import React from 'react';
-import clsx from 'clsx';
 import Layout from '@theme/Layout';
+import Link from "@docusaurus/Link";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
 import SPHButton from "../components/SPHButton";
 
 import {projects} from "../constants/projects";
 import SPHCard from "../components/SPHCard";
 import SPHTitleBar from "../components/SPHTitleBar";
 
-import "https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css";
-
-function HomepageHeader() {
+function Hero() {
     const {siteConfig} = useDocusaurusContext();
     return (
-        <header className={clsx('hero hero--primary', styles.heroBanner)}>
+        <header className="hero hero--primary">
             <div className="container">
                 <h1 className="hero__title">{siteConfig.title}</h1>
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
-                <div className={styles.buttons}>
-                    <SPHButton type="filled" link="/docs">Get started</SPHButton>
+                <div className="buttons">
+                    <Link to="/docs">
+                        <button className="sph-button sph-button--filled sph-button--hero">
+                            <span className="sph-button__label">GET STARTED</span>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </header>
@@ -31,7 +32,7 @@ export default function Home() {
         <Layout
             title={`HOME`}
             description="Description will go into a meta tag in <head />">
-            <HomepageHeader/>
+            <Hero/>
             <main className="content-wrap">
                 <SPHTitleBar>SurPathHub Projects</SPHTitleBar>
                 <section className="grid" id="docs-list">
