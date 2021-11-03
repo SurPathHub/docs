@@ -6,12 +6,13 @@ interface SPHButtonProps {
     icon?: string;
     type?: string;
     link?: string;
+    isDisabled?: boolean;
 }
 
-const SPHButton: React.FC<SPHButtonProps> = ({ label, icon, type, children, link }) => {
+const SPHButton: React.FC<SPHButtonProps> = ({ label, icon, type, children, link, isDisabled }) => {
     if (!link) {
         return (
-            <button className={`sph-button${ type == 'filled' ? 'sph-button--filled' : type == 'outlined' ? 'sph-button--outlined' : '' }`} { ...type == 'disabled' ? 'disabled' : '' }>
+            <button className={`sph-button${ type ? ' sph-button--' + type : '' }`} disabled={isDisabled}>
                 { icon && <i className={`sph-button__icon bx ${ icon || 'bxs-like' }`} aria-hidden="true" /> }
                 { label || children && <span className="sph-button__label">{ label || children }</span> }
             </button>
@@ -19,7 +20,7 @@ const SPHButton: React.FC<SPHButtonProps> = ({ label, icon, type, children, link
     } else {
         return (
             <Link to={ link }>
-                <button className={`sph-button${ type == 'filled' ? ' sph-button--filled' : type == 'outlined' ? ' sph-button--outlined' : '' }`} { ...type == 'disabled' ? 'disabled' : '' }>
+                <button className={`sph-button${ type ? ' sph-button--' + type : '' }`} disabled={isDisabled}>
                     { icon && <i className={`sph-button__icon bx ${ icon || 'bxs-like' }`} aria-hidden="true" /> }
                     { label || children && <span className="sph-button__label">{ label || children }</span> }
                 </button>

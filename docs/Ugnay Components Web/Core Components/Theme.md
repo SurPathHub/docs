@@ -1,6 +1,11 @@
 ---
 slug: /ugnay/core/theme 
 title: Theme
+tags:
+- Ugnay Components Web
+- Design System
+- SCSS
+- CSS
 ---
 # Theme
 - This is the documentation of the most important core module to be used in the library.

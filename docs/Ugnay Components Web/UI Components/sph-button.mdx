@@ -1,18 +1,38 @@
 ---
-slug: /ugnay/components/sph-button
-id: sph-button
-title: SPHButton
+slug: /ugnay/components/sph-button 
+id: sph-button 
+title: SPHButton 
+tags:
+- Ugnay Components Web
+- Design System
+- SCSS
+- CSS
 ---
 
 # SPHButton Documentation
 
 - This component uses the [box-icons library](https://boxicons.com/).
 
-![img.png](_img/button.png)
+import {SPHComponentPreview, SPHComponentPreviewRow} from '../../../src/components/SPHComponentPreview';
+import SPHButton from '../../../src/components/SPHButton';
+
+<SPHComponentPreview cols="2">
+    <SPHComponentPreviewRow>
+        <SPHButton icon="bxs-like">BUTTON</SPHButton>
+        <SPHButton icon="bxs-like" type="outlined">BUTTON</SPHButton>
+        <SPHButton icon="bxs-like" type="filled">BUTTON</SPHButton>
+    </SPHComponentPreviewRow>
+    <SPHComponentPreviewRow>
+        <SPHButton icon="bxs-like" isDisabled>BUTTON</SPHButton>
+        <SPHButton icon="bxs-like" type="outlined" isDisabled>BUTTON</SPHButton>
+        <SPHButton icon="bxs-like" type="filled" isDisabled>BUTTON</SPHButton>
+    </SPHComponentPreviewRow>
+</SPHComponentPreview>
 
 ## HTML
 
 ```html
+
 <button class="sph-button">
     <i class="sph-button__icon bx bxs-like" aria-hidden="true"></i>
     <span class="sph-button__label">BUTTON</span>

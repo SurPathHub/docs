@@ -2,13 +2,18 @@
 slug: /ugnay/components/sph-appbar
 id: sph-appbar
 title: SPHAppbar
+tags:
+- Ugnay Components Web
+- Design System
+- SCSS
+- CSS
 ---
 
 # SPHAppbar Documentation
 
 - This component uses the [box-icons library](https://boxicons.com/).
 
-![img.png](_img/appbar.png)
+![appbar.png](_img/appbar.png)
 
 ## HTML
 

@@ -2,6 +2,11 @@
 slug: /ugnay/components/sph-navbar
 id: sph-navbar
 title: SPHNavbar
+tags:
+- Ugnay Components Web
+- Design System
+- SCSS
+- CSS
 ---
 
 # SPHNavbar Documentation

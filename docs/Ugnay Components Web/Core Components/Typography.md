@@ -1,6 +1,11 @@
 ---
 slug: /ugnay/core/typography
 title: Typography
+tags:
+- Ugnay Components Web
+- Design System
+- SCSS
+- CSS
 ---
 
 # Typography

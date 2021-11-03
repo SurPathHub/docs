@@ -6,6 +6,7 @@
     $button-size: 16px
 );
 @use '~@surpathhub/ugnay/SPHCard';
+@use '~@surpathhub/ugnay/SPHTextField';
 
 @use 'helpers/media-mixins';
 
@@ -85,10 +86,41 @@ code * {
     }
 }
 
-.buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sph-component-preview {
+    width: 100%;
+    max-width: max-content;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.8rem;
+    background-color: var(--sph-theme--primary-dark);
+    border: 1px solid var(--sph-theme--primary);
+    border-radius: 0.5rem;
+    
+    @include Elevation.apply(2);
+    
+    &.col-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    &::before {
+        content: "Component Preview";
+        grid-column: 1 / -1;
+        margin-bottom: 0.4rem;
+        padding: 0.3rem 0.5rem;
+        outline: dashed 1px var(--sph-theme--primary-light);
+    }
+    
+    .sph-component-preview__row {
+        width: max-content;
+        display: flex;
+        flex-flow: column nowrap;
+        
+        & > * + * {
+            flex-basis: content;
+            margin-top: 0.5rem;
+        }
+    }
 }
 
 .footer {
@@ -148,6 +180,9 @@ code * {
 //  SPH Components
 //
 
+.sph-appbar {
+    max-width: 320px !important;
+}
 @include SPHButton.use();
 .sph-button--hero {
     .sph-button__label {
@@ -179,5 +214,16 @@ a:hover {
         object-position: center !important;
         // object-fit: cover !important;
         height: 100% !important;
+    }
+}
+
+@include SPHTextField.use();
+.sph-text-field__input {
+    color: #000;
+}
+
+.error {
+    .sph-text-field__input {
+        color: #d0454c;
     }
 }

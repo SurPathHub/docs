@@ -2,6 +2,11 @@
 slug: /ugnay/components/sph-header
 id: sph-header
 title: SPHHeader
+tags:
+- Ugnay Components Web
+- Design System
+- SCSS
+- CSS
 ---
 
 # SPHHeader Documentation

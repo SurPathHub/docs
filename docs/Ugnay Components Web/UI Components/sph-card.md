@@ -2,6 +2,11 @@
 slug: /ugnay/components/sph-card
 id: sph-card
 title: SPHCard
+tags:
+- Ugnay Components Web
+- Design System
+- SCSS
+- CSS
 ---
 
 # SPHCard Documentation

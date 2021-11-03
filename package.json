@@ -19,7 +19,7 @@
     "@docusaurus/preset-classic": "^2.0.0-beta.8",
     "@docusaurus/theme-search-algolia": "^2.0.0-beta.8",
     "@mdx-js/react": "^1.6.21",
-    "@surpathhub/ugnay": "^0.1.0-beta",
+    "@surpathhub/ugnay": "^0.1.0-beta.1",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
     "docusaurus-plugin-sass": "^0.2.1",

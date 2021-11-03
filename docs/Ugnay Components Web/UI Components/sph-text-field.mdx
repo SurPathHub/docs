@@ -2,11 +2,31 @@
 slug: /ugnay/components/sph-text-field
 id: sph-text-field
 title: SPHTextField
+tags:
+- Ugnay Components Web
+- Design System
+- SCSS
+- CSS
 ---
 
 # SPHTextField Documentation
 
-![img.png](_img/text-field.png)
+import {SPHComponentPreview, SPHComponentPreviewRow} from '../../../src/components/SPHComponentPreview';
+
+<SPHComponentPreview>
+    <SPHComponentPreviewRow>
+        <div class="sph-text-field">
+            <label class="sph-text-field__label" for="your-id-here">Label</label>
+            <input class="sph-text-field__input" type="text" id="your-id-here" />
+            <small class="sph-text-field__helper">Helper Text</small>
+        </div>
+        <div class="sph-text-field error">
+            <label class="sph-text-field__label" for="your-id-here">Label</label>
+            <input class="sph-text-field__input" type="text" id="your-id-here" />
+            <small class="sph-text-field__helper">Helper Text</small>
+        </div>
+    </SPHComponentPreviewRow>
+</SPHComponentPreview>
 
 ## HTML
 ```html
